@@ -1,0 +1,50 @@
+name: Bug in a release
+description: For testers. Something in a desktop app release does not work as it should.
+title: "[v0.0.x] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing. Please don't paste client names, window titles or other confidential content: this repository is public.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Click the AllActivity icon; the "About AllActivity Desktop App - v…" line shows it.
+      placeholder: "0.0.87"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Computer
+      options:
+        - macOS (Apple silicon)
+        - macOS (Intel)
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How bad is it?
+      options:
+        - blocker (I cannot track or sign in)
+        - major (a feature does not work)
+        - minor (looks wrong, has a workaround)
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      placeholder: "1. I clicked …  2. I saw …  3. I expected …"
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Date and time with your time zone, so we can find it in the app's logs.
+      placeholder: "17 Nov 2026, 09:30 IST"

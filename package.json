@@ -1,9 +1,11 @@
 {
-  "name": "aa_client",
+  "name": "allactivity-public",
   "version": "1.0.0",
-  "description": "AllActivity Desktop App Client",
+  "description": "Releases of the AllActivity Desktop App (AllActivity GmbH)",
   "scripts": {
     "release": "node scripts/release.js"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://www.allactivity.com",
+  "repository": "https://github.com/AllActivity/public"
 }
